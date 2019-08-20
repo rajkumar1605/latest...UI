@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mentor-sign-Up</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body class="mentor-sign-up-background">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo-red-book.png" alt="Mentor-On-Demand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mentor-signin.html">Mentor Sign In</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Mentor Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Sign Up -->
+    <div class="container my-3 p-2 text-center" id="mentor-sign-up-form">
+
+        <h1 class="display-4 ">Mentor Sign Up</h1>
+
+        <form name="mentor-signup-form" id="mentor-signup-form" action="">
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="mentor-fname"><h4>First Name</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Enter your first name here" name="firstName" id="mentor-fname">
+                    <span id="first-name-validate"></span>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="mentor-lname"><h4>Last Name</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Enter your last name here" name="lastName" id="mentor-lname">
+                    <span id="last-name-validate"></span>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="mentor-gender"><h4>Gender</h4></label>
+                    <select class="form-control custom-select text-center" name="gender" id="mentor-gender">
+                                                 
+                                    <option value="0" disabled="disabled" selected="selected">Select your option</option> 
+                
+                                   <option value="Male">Male</option>
+                
+                                   <option value="Female">Female</option>
+                
+                                </select>
+                    <span id="gender-validate"></span>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="mentor-education"><h4>Education</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Enter your education details here" name="education" id="mentor-education">
+                    <span id="education-validate"></span>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="mentor-time-zone"><h4>Time Zone</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Enter your time zone here" name="timeZone" id="mentor-time-zone">
+                    <span id="time-zone-validate"></span>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="mentor-work-time"><h4>Work Timing</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Enter your work time here" name="workTiming" id="mentor-work-time">
+                    <span id="work-time-validate"></span>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="mentor-skills"><h4>List of Skills</h4></label>
+                    <textarea type="text" rows="2" class="form-control text-center" placeholder="Enter your skills here" name="listOfSkills" id="mentor-skills"></textarea>
+                    <span id="skills-validate"></span>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="mentor-facilities"><h4>Facilities Provided</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Study materials, Cloud labs, Examples etc.," name="facilities" id="mentor-facilities">
+                    <span id="facilities-validate"></span>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="mentor-YOE"><h4>Years of Experience</h4></label>
+                    <input type="number" class="form-control text-center" placeholder="Enter your years of experience here" name="yearsOfExperience" id="mentor-YOE">
+                    <span id="mentor-YOE-validate"></span>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="mentor-linkedin"><h4>LinkedIn URL</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Enter your LinkedIn URL here" name="linkedinURL" id="mentor-linkedin">
+                    <span id="linkedin-validate"></span>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="mentor-num"><h4>Contact Number</h4></label>
+                    <input type="number" class="form-control text-center" placeholder="Enter your contact number here" name="contactNumber" id="mentor-num">
+                    <span id="num-validate"></span>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="mentor-signup-email"><h4>Email-Id</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Enter your email-id here" name="userNameEmail" id="mentor-signup-email">
+                    <span id="signup-email-validate"></span>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="mentor-re-email"><h4>Re-enter email-Id</h4></label>
+                    <input type="text" class="form-control text-center" placeholder="Re-enter email-id" name="reEmail" id="mentor-re-email">
+                    <span id="reemail-validate"></span>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="mentor-signup-password"><h4>Password</h4></label>
+                    <input type="password" class="form-control text-center" placeholder="Enter your password here" autocomplete="off" name="password" id="mentor-signup-password">
+                    <span id="signup-password-validate"></span>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="mentor-re-password"><h4>Re-enter password</h4></label>
+                    <input type="password" class="form-control text-center" placeholder="Re-enter password" autocomplete="off" name="rePassword" id="mentor-re-password">
+                    <span id="repassword-validate"></span>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="mentor-security-question"><h4>Security Question</h4></label>
+                    <select class="form-control custom-select text-center" placeholder="Security Question" name="securityQuestion" id="mentor-security-question"> 
+        
+                            <option value="0" disabled="disabled" selected="selected">Select your option</option> 
+        
+                            <option value="team"> What is your favorite team?</option> 
+        
+                            <option value="movie">What is your favorite movie?</option>
+                            
+                            <option value="nick_name">What was your childhood nickname?</option>
+                             
+                            <option value="job">In what town was your first job?</option>
+                              
+                            <option value="friend">What is the name of your favorite childhood friend?</option>
+                       
+                            <option value="own" id="seqown">Create your own question(Recommended)</option> 
+         
+                        </select>
+
+                    <span id="security-question-validate"></span>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12" id="own-security-question-for-js">
+                    <label for="own-security-question"><h4>Enter your own security question</h4></label>
+                    <input type="text" maxlength="60" class="form-control text-center" placeholder="Enter your own question here" name="ownSecurityQuestion" id="own-security-question">
+                    <span id="own-security-question-validate"></span>
+                </div>
+
+                <div class="form-group col-12" id="security-answer-for-js">
+                    <label for="security-answer"><h4>Security answer</h4></label>
+                    <input type="text" maxlength="30" class="form-control text-center" placeholder="Enter your answer here" autocomplete="off" name="securityAnswer" id="security-answer">
+                    <span id="security-answer-validate"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary col-lg-5 custom-mentor-submit mb-3">Sign Up</button>
+
+        </form>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/mentor-signup-script.js"></script>
+
+</body>
+
+</html>

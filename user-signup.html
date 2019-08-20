@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User-sign-Up</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body class="user-sign-up-background">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo-red-book.png" alt="Mentor-On-Demand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="user-signin.html">User Sign In</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">User Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Sign Up -->
+    <div class="container text-white" id="user-sign-up-form">
+
+        <h1 class="display-4">User Sign Up</h1>
+
+        <form name="user-signup-form" id="user-signup-form" action="">
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-fname"><h4>First Name</h4></label>
+                    <input type="text" class="form-control form-control-lg text-center" placeholder="Enter your first name here" name="user-first-name" id="user-fname">
+                    <span id="first-name-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-lname"><h4>Last Name</h4></label>
+                    <input type="text" class="form-control form-control-lg text-center" placeholder="Enter your last name here" name="user-last-name" id="user-lname">
+                    <span id="last-name-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-gender"><h4>Gender</h4></label>
+                    <select class="form-control form-control-lg custom-select text-center" name="user-gender" id="user-gender">
+                                 
+                    <option value="0" disabled="disabled" selected="selected">Select your option</option> 
+
+                   <option value="Male">Male</option>
+
+                   <option value="Female">Female</option>
+
+                </select>
+                    <span id="gender-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-education"><h4>Education</h4></label>
+                    <input type="text" class="form-control form-control-lg text-center" placeholder="Enter your education details here" name="user-education" id="user-education">
+                    <span id="education-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-AOI" class="user-aoi"><h4>Area of interest<h6>&nbsp(optional)</h6></h4></label>
+                    <input type="text" class="form-control form-control-lg text-center" placeholder="Enter your area of interest here" name="user-AOI" id="user-AOI">
+                    <span id="AOI-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-num"><h4>Contact Number</h4></label>
+                    <input type="number" class="form-control form-control-lg text-center" placeholder="Enter your contact number here" name="user-num" id="user-num">
+                    <span id="num-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-signup-email"><h4>Email-Id</h4></label>
+                    <input type="text" class="form-control form-control-lg text-center" placeholder="Enter your email-id here" name="user-signup-email" id="user-signup-email">
+                    <span id="signup-email-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-re-email"><h4>Re-enter email-Id</h4></label>
+                    <input type="text" class="form-control form-control-lg text-center" placeholder="Re-enter email-id" name="user-re-email" id="user-re-email">
+                    <span id="reemail-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-signup-password"><h4>Password</h4></label>
+                    <input type="password" class="form-control form-control-lg text-center" placeholder="Enter your password here" autocomplete="off" name="user-signup-password" id="user-signup-password">
+                    <span id="signup-password-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-re-password"><h4>Re-enter password</h4></label>
+                    <input type="password" class="form-control form-control-lg text-center" placeholder="Re-enter password" autocomplete="off" name="user-re-password" id="user-re-password">
+                    <span id="repassword-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="user-security-question"><h4>Security Question</h4></label>
+                    <select class="form-control form-control-lg custom-select text-center" placeholder="Security Question" name="user-security-question" id="user-security-question"> 
+
+                    <option value="0" disabled="disabled" selected="selected">Select your option</option> 
+
+                    <option value="team"> What is your favorite team?</option> 
+
+                    <option value="movie">What is your favorite movie?</option>
+                    
+                    <option value="nick_name">What was your childhood nickname?</option>
+                     
+                    <option value="job">In what town was your first job?</option>
+                      
+                    <option value="friend">What is the name of your favorite childhood friend?</option>
+               
+                    <option value="own" id="seqown">Create your own question(Recommended)</option> 
+ 
+                </select>
+                    <span id="security-question-validate"></span><br>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-12" id="own-security-question-for-js">
+                    <label for="own-security-question"><h4>Enter your own security question</h4></label>
+                    <input type="text" maxlength="60" class="form-control form-control-lg text-center" placeholder="Enter your own question here" name="ownSecurityQuestion" id="own-security-question">
+                    <span id="own-security-question-validate"></span>
+                </div>
+
+                <div class="form-group col-12" id="security-answer-for-js">
+                    <label for="security-answer"><h4>Security answer</h4></label>
+                    <input type="text" maxlength="30" class="form-control form-control-lg text-center" placeholder="Enter your answer here" autocomplete="off" name="securityAnswer" id="security-answer">
+                    <span id="security-answer-validate"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary col-lg-5 custom-user-submit">Sign Up</button>
+
+        </form>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/user-signup-script.js"></script>
+
+</body>
+
+</html>

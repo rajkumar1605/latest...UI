@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mentor-sign-in</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body class="mentor-sign-in-background">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo-red-book.png" alt="Mentor-On-Demand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Mentor Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mentor-signup.html">Mentor Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Sign In -->
+    <div class="container" id="mentor-sign-in-form">
+
+        <h1 class="display-4">Mentor Sign in</h1>
+
+        <form name="mentor-signin-form" id="mentor-signin-form" action="">
+
+            <div class="form-groupe">
+                <i class="fa fa-envelope"></i><label for="mentor-email"><h4>&nbspEmail address</h4></label>
+                <input type="text" class="form-control form-control-lg text-center" aria-describedby="emailHelp" placeholder="Enter email" name="mentor-email" id="mentor-email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <span id="email-validate"></span><br><br>
+
+            <div class="form-group">
+                <i class="fa fa-lock"></i><label for="mentor-password"><h4>&nbspPassword</h4></label>
+                <input type="password" class="form-control form-control-lg text-center" placeholder="Password" autocomplete="off" name="mentor-password" id="mentor-password">
+            </div>
+
+            <span id="password-validate"></span><br><br>
+
+            <a href="#" class="mentor-forgot-password"><i class="
+                forgot-pass-font">Forgot password?</i></a>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input custom-user-check" id="Check">
+                <label class="form-check-label custom-user-rememberme" for="Check"><h4>&nbspRemember me</h4></label>
+            </div>
+
+            <button type="submit" class="btn btn-primary col-lg-3" id="mentor-sign-in-submit">Sign In</button>
+
+            <!-- remove -->
+            <br>
+            <a href="mentor-homepage.html">link-to-homepage(remove)</a>
+
+        </form>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/mentor-signin-script.js"></script>
+
+</body>
+
+</html>

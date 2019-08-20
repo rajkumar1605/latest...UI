@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin-Home-Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body class="admin-home-page">
+
+    <!-- Navigation Top -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white navbar-default">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo-red-book.png" alt="Mentor-On-Demand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <form class="form-inline form-row" id="mentor-search-form" action="user-search-result.html">
+                            <input class="form-control form-control-lg text-center text-info mr-1 col-lg-4" type="search" placeholder="User Name" aria-label="Search">
+                            <button class="btn btn-outline-warning btn-lg mr-2 col-lg-2" type="submit">Search</button>
+                            <input class="form-control form-control-lg mr-1 text-center text-success col-lg-3" type="search" placeholder="Mentor Name" aria-label="Search">
+                            <button class="btn btn-outline-info btn-lg col-lg-2" type="submit">Search</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome message -->
+
+    <div class="text-center text-warning d-block" id="welcoming-admin"><i>Hello Mr/Mrs@Admin-first-name...Manage with
+            ease</i>&#128515;</div>
+
+    <!-- Top Nav and its contents-->
+    <ul class="container-fluid nav nav-pills nav-justified admin-custom-pills-tab" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active text-center" id="admin-pills-course-tab" data-toggle="pill" href="#admin-pills-course" role="tab" aria-controls="admin-pills-course" aria-selected="true">Manage
+                Courses & its Commision</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-center" id="admin-pills-user-tab" data-toggle="pill" href="#admin-pills-user" role="tab" aria-controls="admin-pills-user" aria-selected="true">Manage Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-center" id="admin-pills-mentor-tab" data-toggle="pill" href="#admin-pills-mentor" role="tab" aria-controls="admin-pills-mentor" aria-selected="false">Manage Mentors</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link text-center" id="admin-pills-payment-tab" data-toggle="pill" href="#admin-pills-payment"
+                role="tab" aria-controls="admin-pills-payment" aria-selected="false">Payments and Commision</a>
+        </li> -->
+    </ul>
+
+    <!-- Contents -->
+    <div class="tab-content" id="pills-tabContent">
+
+        <div class="tab-pane fade show active" id="admin-pills-course" role="tabpanel" aria-labelledby="admin-pills-course-tab">
+            <div class="container" id="admin-home-course-table">
+                <div class="table-responsive text-center">
+                    <table class="table table-striped table-hover w-100 custom-font-table">
+                        <button type="button" class="btn btn-primary btn-lg text-center my-2" id="add-new-course-by-admin">Add a
+                            new course
+                        </button>
+
+                        <thead class="table-warning">
+                            <tr>
+                                <th colspan="5" class="text-center ">Allowable Courses by the Site</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table-light" id="admin-manageCourses">
+                            <tr class="table-active">
+                                <th class="text-center">Course name</th>
+                                <th class="text-center">Total Earnings from this course</th>
+                                <th class="text-center">Commision percentage</th>
+                                <th class="text-center">Edit Commision</th>
+                                <th class="text-center">Remove</th>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="admin-pills-user" role="tabpanel" aria-labelledby="admin-pills-user-tab">
+            <div class="container-fluid my-5 p-3 text-center" id="admin-home-user-table">
+
+                <button type="button" class="col-4 btn btn-lg btn-warning mx-5 mb-4" id="search-by-admin-user-id">Search
+                    Users by User-Id
+                </button>
+
+                <button type="button" class="col-4 btn btn-lg btn-primary mx-5 mb-4" id="search-by-admin-user-course">Search
+                    Users based on Course
+                </button>
+
+                <div class="container-fluid text-center">
+                    <div class="col-6 text-center d-inline-block" id="admin-user-id-search-background-yellow">
+                        <div class="col-md-12 my-4"><i>
+                                <h1>User-Id Search</h1>
+                            </i>
+                        </div>
+
+                        <div class="col-12">
+                            <table class="table table-responsive-md table-hover">
+                                <thead class="thead-dark">
+                                    <th>Name</th>
+                                    <th>Login-Id</th>
+                                    <th>Status</th>
+                                    <th class="text-danger">Block</th>
+                                    <th class="text-success">Unblock</th>
+                                </thead>
+                                <tbody class="table-light">
+                                    <tr>
+                                        <td>
+                                            <h5>Ravi</h5>
+                                        </td>
+                                        <td>
+                                            <h5>ravi@g.com</h5>
+                                        </td>
+                                        <td>
+                                            <h5>Active</h5>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/block-img.png" alt="block"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/unblock-img.png" alt="Unblock"></a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid text-center my-3">
+                    <div class="col-9 text-center d-inline-block" id="admin-course-search-background-orange">
+                        <div class="col-md-12 my-4"><i>
+                                <h1>Course Search</h1>
+                            </i>
+                        </div>
+
+                        <div class="col-12">
+                            <table class="table table-responsive-md table-hover">
+                                <thead class="thead-dark">
+                                    <th>Name</th>
+                                    <th>Login-Id</th>
+                                    <th>Status</th>
+                                    <th class="text-danger">Block</th>
+                                    <th class="text-success">Unblock</th>
+                                </thead>
+                                <tbody class="table-info">
+                                    <tr>
+                                        <td>
+                                            <h5>Shakshi</h5>
+                                        </td>
+                                        <td>
+                                            <h5>shak@g.com</h5>
+                                        </td>
+                                        <td>
+                                            <h5>Active</h5>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/block-img.png" alt="block"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/unblock-img.png" alt="Unblock"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>Kiran</h5>
+                                        </td>
+                                        <td>
+                                            <h5>kiran@g.com</h5>
+                                        </td>
+                                        <td>
+                                            <h5>Inactive</h5>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/block-img.png" alt="block"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/unblock-img.png" alt="Unblock"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="admin-pills-mentor" role="tabpanel" aria-labelledby="admin-pills-mentor-tab">
+            <div class="container-fluid my-5 p-3 text-center" id="admin-home-mentor-table">
+
+                <button type="button" class="col-4 btn btn-lg btn-danger mx-5 mb-4" id="search-by-admin-mentor-id">Search Mentors by User-Id
+                </button>
+
+                <button type="button" class="col-4 btn btn-lg btn-dark mx-5 mb-4" id="search-by-admin-mentor-course">Search
+                    Mentors based on Course
+                </button>
+
+                <div class="container-fluid text-center">
+                    <div class="col-6 text-center d-inline-block" id="admin-user-id-search-background-red">
+                        <div class="col-md-12 my-4"><i>
+                                <h1>User-Id Search</h1>
+                            </i>
+                        </div>
+
+                        <div class="col-12">
+                            <table class="table table-responsive-md table-hover">
+                                <thead class="thead-dark">
+                                    <th>Name</th>
+                                    <th>Login-Id</th>
+                                    <th>Status</th>
+                                    <th class="text-danger">Block</th>
+                                    <th class="text-success">Unblock</th>
+                                </thead>
+                                <tbody class="table-warning">
+                                    <tr>
+                                        <td>
+                                            <h5>Vikram</h5>
+                                        </td>
+                                        <td>
+                                            <h5>viki@g.com</h5>
+                                        </td>
+                                        <td>
+                                            <h5>Active</h5>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/block-img.png" alt="block"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/unblock-img.png" alt="unblock"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid text-center my-3">
+                    <div class="col-9 text-center d-inline-block" id="admin-course-search-background">
+                        <div class="col-md-12 my-4"><i>
+                                <h1>Course Search</h1>
+                            </i>
+                        </div>
+
+                        <div class="col-12">
+                            <table class="table table-responsive-md table-hover">
+                                <thead class="thead-dark">
+                                    <th>Name</th>
+                                    <th>Login-Id</th>
+                                    <th>Status</th>
+                                    <th class="text-danger">Block</th>
+                                    <th class="text-success">Unblock</th>
+                                </thead>
+                                <tbody class="table-info">
+                                    <tr>
+                                        <td>
+                                            <h5>Shakshi</h5>
+                                        </td>
+                                        <td>
+                                            <h5>shak@g.com</h5>
+                                        </td>
+                                        <td>
+                                            <h5>Active</h5>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/block-img.png" alt="block"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/unblock-img.png" alt="Unblock"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>Kiran</h5>
+                                        </td>
+                                        <td>
+                                            <h5>kiran@g.com</h5>
+                                        </td>
+                                        <td>
+                                            <h5>Inactive</h5>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/block-img.png" alt="block"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="images/unblock-img.png" alt="Unblock"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade container-fluid" id="admin-pills-payment" role="tabpanel" aria-labelledby="admin-pills-payment-tab">
+            <h1>Payment and Commision</h1>
+            <form class="container mb-3 p-2 text-center" id="mentor-edit-profile-form">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="time-zone">
+                            <h4>Time zone</h4>
+                        </label>
+                        <input type="text" class="form-control text-center" id="time-zone" placeholder="Time zone">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="work-timing">
+                            <h4>Work timimg</h4>
+                        </label>
+                        <input type="text" class="form-control text-center" id="work-timimg" placeholder="Work timing">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="update-contact-number">
+                            <h4>Contact number</h4>
+                        </label>
+                        <input type="number" class="form-control text-center" id="update-contact-number" placeholder="New contact number">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="years-of-experience">
+                            <h4>Years of experience</h4>
+                        </label>
+                        <input type="number" class="form-control text-center" id="years-of-experience" placeholder="Updated years of experience">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="update-technical-skill">
+                        <h4>Update technological skills</h4>
+                    </label>
+                    <textarea type="text" rows="3" class="form-control text-center" id="update-technical-skill" placeholder="List of known technology"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg text-center mb-1" id="update-mentor-from-form">Update</button>
+
+            </form>
+
+            <div class="container-fluid" id="mentor-home-edit-profile">
+
+                <div class="table-responsive-lg text-center">
+                    <table class="table table-striped table-hover table-bordered w-100 custom-font-table">
+
+                        <thead class="table-danger">
+                            <tr>
+                                <th colspan="6" class="text-center">Edit your deliverables</th>
+                            </tr>
+                        </thead>
+
+                        <tr class="table-default">
+                            <th class="text-center">Course name</th>
+                            <th class="text-center">Facilities provided</th>
+                            <th class="text-center">Duration of the course</th>
+                            <th class="text-center">Preferred time</th>
+                            <th class="text-center">Expected payment</th>
+                            <th class="text-center">Edit</th>
+                        </tr>
+
+                        <tbody class="text-light">
+                            <tr>
+                                <th class="text-center"><input type="text" class="text-center" value="Bootstrap"></th>
+                                <td class="text-center"><input type="text" class="text-center" value="Cloud labs,eg's">
+                                </td>
+                                <td class="text-center"><input type="text" class="text-center" value="3 months"></td>
+                                <td class="text-center"><input type="text" class="text-center" value="3pm-everyday">
+                                </td>
+                                <td class="text-center"><input type="text" class="text-center" value="Rs.3000"></td>
+                                <td class="text-center"><a href="#"><button type="button"
+                                            class="btn custom-update">Edit</button></a></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <button type="button" class="btn btn-primary btn-lg text-center mb-1" id="add-new-course-by-mentor">Add a
+                        new course</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="admin-pills-payment" role="tabpanel" aria-labelledby="admin-pills-payment-tab">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-5 text-center" id="mentor-past-withdrawl-background">
+                        <div class="col-md-12 my-4"><i>
+                                <h1>Withdrawn money so far</h1>
+                            </i></div>
+                        <input type="text" class="col-md-12 text-center form-control-lg mb-4 p-5" id="mentor-wallet-withdrew-money-background" value="Rs.90000" readonly>
+                    </div>
+
+                    <div class="col-2"></div>
+
+                    <div class="col-5 text-center" id="mentor-wallet-background">
+                        <div class="col-md-12 display-4 my-4"><i>Wallet</i></div>
+                        <input type="text" class="col-md-12 text-center form-control-lg mb-4 p-5" id="mentor-wallet-money-background" value="Rs.40000" readonly>
+                        <button class="col-md-6 btn btn-lg btn-info text-center mb-2" type="submit">Withdraw</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container mt-5" id="mentor-home-payment-table">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered w-100 custom-font-table">
+
+                        <thead class="thead-dark">
+                            <tr>
+                                <th colspan="5" class="text-center ">Expected Earnings</th>
+                            </tr>
+                        </thead>
+
+
+                        <tr class="table-success">
+                            <th class="text-center">Course name</th>
+                            <th class="text-center">Duration of the course</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Current payment slot</th>
+                            <th class="text-center">Expected payment(per attendee)</th>
+                        </tr>
+
+                        <tbody class="table-secondary">
+                            <tr>
+                                <td class="text-center">Full Stack</td>
+                                <td class="text-center">4 months</td>
+                                <td class="text-center">In proposal</td>
+                                <td class="text-center">NA</td>
+                                <td class="text-center">Rs.2000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Java</td>
+                                <td class="text-center">1 months</td>
+                                <td class="text-center">Ongoing</td>
+                                <td class="text-center">3rd</td>
+                                <td class="text-center">Rs.1000</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Dynamic table population -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/admin-homepage.js"></script>
+
+</body>
+
+</html>

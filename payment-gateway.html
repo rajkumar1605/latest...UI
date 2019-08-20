@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Payment Gateway</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body class="payment-gateway-background">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo-red-book.png" alt="Mentor-On-Demand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user-homepage.html">Go back</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Payment Form -->
+
+    <form class="container my-5 p-4 text-center" id="payment-form" name="payment-form">
+        <h1 class="display-4 text-white">Enter Bank Details for Payment</h1>
+        <div class="row my-3">
+            <div class="form-group col-md-6">
+                <label for="self-acct-num">
+                    <h4>Your Account Number</h4>
+                </label>
+                <input type="number" class="form-control form-control-lg text-center" id="self-acct-num" placeholder="Enter your account number here">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="self-ifsc">
+                    <h4>Your Account's IFSC Code</h4>
+                </label>
+                <input type="text" class="form-control form-control-lg text-center" id="self-ifsc" placeholder="Enter your IFSC code here">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="recp-acct-num">
+                    <h4>Recipient Account Number</h4>
+                </label>
+                <input type="number" class="form-control form-control-lg text-center" id="recp-acct-num" placeholder="Enter recipient account number here">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="recp-ifsc">
+                    <h4>Recipient IFSC Code</h4>
+                </label>
+                <input type="text" class="form-control form-control-lg text-center" id="recp-ifsc" placeholder="Enter recipient IFSC code here">
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+            <label for="recp-name">
+                <h4>Recipient Name</h4>
+            </label>
+            <input type="text" class="form-control form-control-lg text-center" id="recp-name" placeholder="Enter recipient name here">
+        </div>
+
+        <div class="form-group text-center">
+            <label for="amount">
+                <h4>Amount</h4>
+            </label>
+            <input type="text" class="form-control form-control-lg text-center" id="amount" placeholder="Enter the amount here">
+        </div>
+
+        <button type="submit" class="col-5 btn btn-warning btn-lg text-center my-4" id="pay-button">Pay</button>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/payment-script.js"></script>
+
+</body>
+
+</html>

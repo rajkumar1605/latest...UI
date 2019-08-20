@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', Times New Roman, sans-serif;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.navbar {
+    padding: 8px;
+    /* background-color: #e3f2fd; */
+    /* background: #c2e59c;  */
+    /* background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  */
+    /* background: linear-gradient(to right, #64b3f4, #c2e59c); */
+}
+
+.navbar-nav li {
+    padding-right: 30px;
+}
+
+.nav-link {
+    font-size: 20px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 800px;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50);
+}
+
+#for-black-color {
+    color: black;
+}
+
+#for-white-color {
+    color: white;
+}
+
+.user-description {
+    color: black;
+    margin: 10px 0 20px 0;
+}
+
+.user-sign-in-background {
+    margin: 0 auto;
+    background-image: url("../images/user-signin-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 1024px;
+}
+
+#user-sign-in-form {
+    text-align: center;
+    padding: 100px 200px 100px 200px;
+    background-color: rgba(51, 0, 0, 0.7);
+}
+
+#user-sign-in-form h1 {
+    margin-bottom: 30px;
+}
+
+#user-sign-in-form .fa-envelope {
+    font-size: 30px;
+}
+
+#user-sign-in-form .fa-lock {
+    font-size: 30px;
+}
+
+.user-forgot-password {
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.forgot-pass-font {
+    font-size: 30px;
+    color: crimson;
+}
+
+.forgot-pass-font-admin {
+    font-size: 30px;
+    color: cyan;
+}
+
+.custom-user-check {
+    width: 20px;
+    height: 20px;
+}
+
+.mentor-sign-in-background {
+    margin: 0 auto;
+    background-image: url("../images/mentor-signin-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 1024px;
+}
+
+#mentor-sign-in-form {
+    text-align: center;
+    padding: 100px 200px 100px 200px;
+    background-color: rgba(88, 214, 141, 0.8);
+}
+
+#mentor-sign-in-form h1 {
+    margin-bottom: 30px;
+}
+
+#mentor-sign-in-form .fa-envelope {
+    font-size: 30px;
+}
+
+#mentor-sign-in-form .fa-lock {
+    font-size: 30px;
+}
+
+.mentor-forgot-password {
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.admin-sign-in-background {
+    margin: 0 auto;
+    background-image: url("../images/admin-signin-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 1024px;
+}
+
+#admin-sign-in-form {
+    text-align: center;
+    padding: 100px 200px 100px 200px;
+    background-color: rgba(211, 84, 0, 0.7);
+}
+
+#admin-sign-in-form h1 {
+    margin-bottom: 30px;
+}
+
+#admin-sign-in-form .fa-envelope {
+    font-size: 30px;
+}
+
+#admin-sign-in-form .fa-lock {
+    font-size: 30px;
+}
+
+.admin-forgot-password {
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.user-sign-up-background {
+    margin: 0 auto;
+    background-image: url("../images/user-signup-background.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% 1024px;
+}
+
+#user-sign-up-form {
+    background-color: rgba(128, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 1px solid brown;
+    text-align: center;
+    padding: 50px 200px 50px 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#user-sign-up-form h1 {
+    margin-bottom: 30px;
+}
+
+.mentor-sign-up-background {
+    margin: 0 auto;
+    background-image: url("../images/mentor-signup-background.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% 1024px;
+}
+
+.custom-mentor-submit {
+    margin-top: 10px;
+}
+
+#mentor-sign-up-form {
+    background-color: rgba(93, 173, 226, 0.7);
+    border-radius: 20px;
+    border: 1px solid blue;
+}
+
+#mentor-sign-up-form h1 {
+    margin-bottom: 10px;
+}
+
+.user-aoi h4,
+h6 {
+    display: inline-block;
+}
+
+.custom-user-rememberme h4 {
+    margin-bottom: 20px;
+}
+
+select {
+    text-align-last: center;
+}
+
+.custom-user-submit {
+    margin-top: 20px;
+}
+
+.search-without-signin {
+    margin: 0 auto;
+    background-image: url("../images/user-search-without-signin.jpg");
+    background-repeat: repeat;
+    background-size: 100% 1024px;
+}
+
+#custom-user-pad {
+    padding-top: 40px;
+}
+
+#user-search-result {
+    margin-top: 50px;
+    background-color: rgba(229, 232, 232, 0.7);
+    border-radius: 10px;
+}
+
+
+/* ================ */
+
+.mentor-home-page {
+    height: auto;
+    margin: 0 auto;
+    background-image: url("../images/mentor-homepage.jpg");
+    background-repeat: repeat;
+    background-size: 100% 1024px;
+}
+
+#welcoming-mentor {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+}
+
+.mentor-custom-pills-tab {
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 99, 71, 0.4);
+    margin: 10px 0 20px 0;
+}
+
+.mentor-custom-pills-tab li a {
+    color: aqua;
+}
+
+#mentor-home-training-table {
+    background-color: rgba(224, 114, 114, 0.3);
+    border-radius: 10px;
+}
+
+#mentor-home-notify {
+    background-color: rgba(243, 215, 215, 0.5);
+    border-radius: 10px;
+}
+
+#mentor-home-edit-profile {
+    background-color: rgba(148, 150, 158, 0.8);
+    border-radius: 10px;
+}
+
+#mentor-home-current-table {
+    background-color: rgba(148, 150, 158, 0.8);
+    border-radius: 10px;
+}
+
+#mentor-edit-profile-form {
+    background-color: rgba(40, 116, 166, 0.7);
+    border-radius: 10px;
+}
+
+#mentor-past-withdrawl-background {
+    background-color: rgba(244, 208, 63, 0.7);
+    border-radius: 10px;
+}
+
+#mentor-wallet-withdrew-money-background {
+    background-color: rgba(86, 101, 115, 0.7);
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+#mentor-wallet-background {
+    background-color: rgba(142, 68, 173, 0.7);
+    border-radius: 10px;
+}
+
+#mentor-wallet-money-background {
+    background-color: rgba(245, 183, 177, 0.7);
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+#mentor-home-payment-table {
+    background-color: rgba(148, 150, 158, 0.8);
+    border-radius: 10px;
+}
+
+.admin-home-page {
+    height: auto;
+    margin: 0 auto;
+    background-image: url("../images/admin-homepage.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% 1024px;
+}
+
+#welcoming-admin {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+}
+
+.admin-custom-pills-tab {
+    width: auto;
+    height: auto;
+    background-color: rgba(142, 68, 173, 0.3);
+    margin: 10px 0 20px 0;
+}
+
+.admin-custom-pills-tab li a {
+    color: rgb(0, 195, 255);
+}
+
+#admin-home-course-table {
+    background-color: rgba(241, 196, 15, 0.8);
+    border-radius: 10px;
+}
+
+#admin-home-user-table {
+    background-color: rgba(77, 121, 189, 0.5);
+    border-radius: 10px;
+}
+
+#admin-home-mentor-table {
+    background-color: rgba(35, 253, 230, 0.3);
+    border-radius: 10px;
+}
+
+#admin-user-id-search-background-yellow {
+    background-color: rgba(244, 208, 63, 0.7);
+    border-radius: 10px;
+}
+
+#admin-course-search-background-orange {
+    background-color: rgba(253, 121, 35, 0.7);
+    border-radius: 10px;
+}
+
+#admin-user-id-search-background-red {
+    background-color: rgba(216, 44, 30, 0.5);
+    border-radius: 10px;
+}
+
+#admin-course-search-background {
+    background-color: rgba(0, 255, 0, 0.3);
+    border-radius: 10px;
+}
+
+.payment-gateway-background {
+    height: auto;
+    margin: 0 auto;
+    background-image: url("../images/payment-gateway.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% 1024px;
+}
+
+#payment-form {
+    background-color: rgba(201, 149, 5, 0.3);
+    border-radius: 20px;
+}
+
+
+/* @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+col-xs-3 col-sm-3 col-md-5 col-lg-9 col-xl-12
+*/
+
+
+/*
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+
+// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+.custom-class {
+  display: none;
+}
+@include media-breakpoint-up(sm) {
+  .custom-class {
+    display: block;
+  }
+}
+
+$("#tbUser").on('click', '.btnDelete', function () {
+    $(this).closest('tr').remove();
+});
+function SomeDeleteRowFunction() {
+      // event.target will be the input element.
+      var td = event.target.parentNode; 
+      var tr = td.parentNode; // the row to be removed
+      tr.parentNode.removeChild(tr);
+}
+
+*/
+
+#sidenav-toggler-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    left: 40px;
+}
+
+#available-courses {
+    height: auto;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 250px;
+    left: 0;
+    background-color: rgba(84, 153, 199, 0.7);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+#available-courses a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #243665;
+    display: block;
+    transition: 0.3s;
+}
+
+#available-courses a:hover {
+    color: white;
+}
+
+#available-courses .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    margin-left: 50px;
+}
+
+.user-home-page {
+    height: auto;
+    margin: 0 auto;
+    background-image: url("../images/user-homepage.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% 1024px;
+}
+
+#welcoming-user {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+}
+
+#user-home-current {
+    margin-top: 50px;
+    background-color: rgba(187, 236, 224, 0.5);
+    border-radius: 10px;
+}
+
+.custom-font-table {
+    font-size: 20px;
+}
+
+.custom-update {
+    font-size: 20px;
+    color: rgb(6, 192, 0);
+}
+
+.custom-finalize {
+    font-size: 20px;
+    color: rgb(133, 12, 12);
+}
+
+#user-container-home-notify {
+    background-color: rgba(230, 42, 236, 0.3);
+    border-radius: 10px;
+}
+
+.custom-card-background {
+    background-color: rgba(234, 245, 139, 1);
+    border-radius: 20px;
+}
+
+#user-rate-mentor-background {
+    background-color: rgba(74, 236, 74, 0.5);
+    border-radius: 10px;
+}
+
+#user-rating-background {
+    background-color: rgba(56, 243, 234, 0.8);
+    border-radius: 20px;
+}

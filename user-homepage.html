@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User-Home-Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body class="user-home-page">
+
+    <!-- Navigation Top -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo-red-book.png" alt="Mentor-On-Demand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <form class="form-inline" id="user-search-green-button-form" action="user-search-result.html">
+                            <input class="form-control form-control-lg mr-sm-2 text-center text-info col-lg-3" type="search" placeholder="Time" aria-label="Search">
+                            <input class="form-control form-control-lg mr-sm-2 text-center text-success col-lg-6" type="search" placeholder="Technology(mandatory)" aria-label="Search">
+                            <button class="btn btn-outline-success btn-lg my-2 my-sm-0 col-lg-2" type="submit">Search</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome message -->
+
+    <div class="text-center text-primary" id="welcoming-user"><i>Hi @user-first-name...Happy Learning</i>&#128515;</div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" id="userTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="user-home-learning-tab" data-toggle="tab" href="#user-home-learning" role="tab" aria-controls="user-home-learning" aria-selected="true">
+                <h3>Learning & Proposed</h3>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="user-home-learnt-tab" data-toggle="tab" href="#user-home-learnt" role="tab" aria-controls="user-home-learnt" aria-selected="false">
+                <h3>Learnt</h3>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="user-home-notify-tab" data-toggle="tab" href="#user-home-notify" role="tab" aria-controls="user-home-notify" aria-selected="false"><button type="button"
+                    class="btn btn-warning btn-lg"><span>Notifications&nbsp</span><i
+                        class="fa fa-bell"></i></button></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="user-progress-update-tab" data-toggle="tab" href="#user-progress-update" role="tab" aria-controls="user-progress-update" aria-selected="false">
+                <h3>Update Progress</h3>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="user-home-rating-tab" data-toggle="tab" href="#user-home-rating" role="tab" aria-controls="user-home-rating" aria-selected="false">
+                <h3>Quicky Rate Mentors</h3>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="user-home-learning" role="tabpanel" aria-labelledby="user-home-learning-tab">
+
+            <!-- Side Nav for available courses -->
+            <div class="sidenav" id="available-courses">
+                <a href="javascript:void(0)" class="closebtn" id="close-side-nav-icon">&#215;</a>
+                <a href="#">J2EE & its Frameworks</a>
+                <a href="#">Database Administrator</a>
+                <a href="#">Cloud Computing</a>
+                <a href="#">Microsoft Technologies</a>
+                <a href="#">Animation & Graphics</a>
+                <a href="#">Software Quality Testing</a>
+                <a href="#">SAS</a>
+                <a href="#">Python</a>
+                <a href="#">JavaScript</a>
+                <a href="#">jQuery</a>
+                <a href="#">React.js</a>
+                <a href="#">Angular</a>
+                <a href="#">HTML, CSS, Bootstrap</a>
+            </div>
+
+            <span id="sidenav-toggler-icon" class="text-info">&#9776; <i>Available Courses</i></span>
+
+            <!-- Bootstrap table -->
+
+            <div class="container" id="user-home-current">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered w-100 custom-font-table">
+                        <thead>
+                            <tr class="table-primary">
+                                <th colspan="6" class="text-center ">Current Trainings</th>
+                            </tr>
+
+                            <tr class="table-warning">
+                                <th class="text-center">Course name</th>
+                                <th class="text-center">Mentor name</th>
+                                <th class="text-center">Current progress</th>
+                                <th class="text-center">Duration of the course</th>
+                                <th class="text-center">Date of completion</th>
+                                <th class="text-center">Update progress</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table-secondary">
+                            <tr class="text-danger">
+                                <th scope="row" class="text-center">JavaScript</th>
+                                <td class="text-center">Athvika</td>
+                                <td class="text-center">75%</td>
+                                <td class="text-center">7 months</td>
+                                <td class="text-center">20/08/2019</td>
+                                <td class="text-center"><a href="#" class="custom-update"><strong>Update</strong></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container" id="user-home-current">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered w-100 table-dark custom-font-table">
+                        <thead>
+                            <tr class="bg-dark">
+                                <th colspan="6" class="text-center">Confirmed Proposals</th>
+                            </tr>
+
+                            <tr class="table-danger text-dark">
+                                <th class="text-center">Course name</th>
+                                <th class="text-center">Mentor name</th>
+                                <th class="text-center">Duration of the course</th>
+                                <th class="text-center">Date of commence</th>
+                                <th class="text-center">Money to be paid</th>
+                                <th class="text-center">Finalize</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="text-warning">
+                                <th scope="row" class="text-center">Full Stack</th>
+                                <td class="text-center">Sundar</td>
+                                <td class="text-center">4 months</td>
+                                <td class="text-center">20/08/2019</td>
+                                <td class="text-center">Rs.5000</td>
+                                <td class="text-center bg-warning"><a href="payment-gateway.html" class="custom-finalize">Finalize</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container" id="user-home-current">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered w-100 custom-font-table">
+                        <thead>
+                            <tr class="table-danger">
+                                <th colspan="5" class="text-center">Proposed Trainings</th>
+                            </tr>
+
+                            <tr class="table-info">
+                                <th class="text-center">Course name</th>
+                                <th class="text-center">Mentor name</th>
+                                <th class="text-center">Duration of the course</th>
+                                <th class="text-center">Money to be paid</th>
+                                <th class="text-center">Review the proposal</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table-warning">
+                            <tr class="text-success">
+                                <th class="text-center">Bootstrap</th>
+                                <td class="text-center">Rithu</td>
+                                <td class="text-center">3 months</td>
+                                <td class="text-center">Rs.3000</td>
+                                <td class="text-center"><a href="#" class="custom-update"><strong>Review</strong></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab-pane" id="user-home-learnt" role="tabpanel" aria-labelledby="user-home-learnt-tab">
+
+            <!-- Bootstrap table -->
+
+            <div class="container" id="user-home-current">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered w-100 custom-font-table">
+                        <thead>
+                            <tr class="table-success">
+                                <th colspan="5" class="text-center ">Past Trainings</th>
+                            </tr>
+
+                            <tr class="bg-warning">
+                                <th class="text-center">Course name</th>
+                                <th class="text-center">Mentor name</th>
+                                <th class="text-center">Duration of the course</th>
+                                <th class="text-center">Date of completion</th>
+                                <th class="text-center">Money paid</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table-dark">
+                            <tr class="text-danger">
+                                <th scope="row" class="text-center">JavaScript</th>
+                                <td class="text-center">Athvika</td>
+                                <td class="text-center">4 months</td>
+                                <td class="text-center">20/08/2019</td>
+                                <td class="text-center"><strong>Rs.4000</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane" id="user-home-notify" role="tabpanel" aria-labelledby="user-home-notify-tab">
+            <div class="container my-5 p-3 text-center" id="user-container-home-notify">
+
+                <button type="button d-inline" class="btn btn-lg btn-danger" id="user-notify-button">Show All Notifications</button>
+
+                <div aria-live="polite" aria-atomic="true" class="my-4 d-flex justify-content-center align-items-center">
+                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+
+                        <div class="toast-header">
+                            <img src="images/notification-icon.png" class="rounded mr-2" alt="notify-logo">
+                            <strong class="mr-auto">Proposal Accepted</strong>
+
+                            <small>just now</small>
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                        </div>
+
+                        <div class="toast-body">
+                            Hey, your proposal for Full Stack has been accepted. Please finalize in learning and proposed section to continue.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div aria-live="polite" aria-atomic="true" class="mb-4 d-flex justify-content-center align-items-center">
+
+                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+
+                        <div class="toast-header">
+                            <img src="images/notification-icon.png" class="rounded mr-2" alt="notify-logo">
+                            <strong class="mr-auto">New Training</strong>
+
+                            <small>10 mins ago</small>
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                        </div>
+
+                        <div class="toast-body">
+                            Hello, your new training on Java starts on 23/09/2019.
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane" id="user-progress-update" role="tabpanel" aria-labelledby="user-progress-update-tab">
+
+            <div class="container mt-3">
+                <div class="card custom-card-background">
+                    <div class="card-body row">
+
+                        <div class="col-md-9 col-sm-12">
+                            <h3 class="card-title">Current Course : JavaScript</h3>
+                            <p class="card-text">Mentor Name : Sathish</p>
+                            <p class="card-text">Duration Of the Course : 2 months</p>
+                            <h4 class="card-text">Progress</h4>
+                            <p class="card-text">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                    </div>
+                                </div>
+                            </p>
+                            <p class="card-text">
+                                <div class="mt-2">
+                                    <label for="customRange" class="d-block"><h4>Slide & Click Update (25%,50%,75%,100%)</h4></label>
+                                    <input type="range" class="custom-range" min="0" max="4" step="1" id="customRange">
+                                </div>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-sm-12 text-center mt-auto">
+                            <button type="button" class="btn" onclick="slideUpdate(this)"><img src="images/update-image.png" alt="Update"></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-3">
+                <div class="card custom-card-background">
+                    <div class="card-body row">
+
+                        <div class="col-md-9 col-sm-12">
+                            <h3 class="card-title">Current Course : JavaScript</h3>
+                            <p class="card-text">Mentor Name : Sathish</p>
+                            <p class="card-text">Duration Of the Course : 2 months</p>
+                            <h4 class="card-text">Progress</h4>
+                            <p class="card-text">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                    </div>
+                                </div>
+                            </p>
+                            <p class="card-text">
+                                <div class="mt-2">
+                                    <label for="customRange" class="d-block"><h4>Slide & Click Update (25%,50%,75%,100%)</h4></label>
+                                    <input type="range" class="custom-range" min="0" max="4" step="1" id="customRange">
+                                </div>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-sm-12 text-center mt-auto">
+                            <button type="button" class="btn" onclick="slideUpdate(this)"><img src="images/update-image.png" alt="Update"></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane" id="user-home-rating" role="tabpanel" aria-labelledby="user-home-rating-tab">
+
+            <div class="container my-5" id="user-rate-mentor-background">
+                <div class="row p-3">
+
+                    <div class="col-5 text-center p-3" id="user-rating-background">
+                        <div class="col-md-12 my-3">
+                            <h2>Mentor Name : Akshika</h2>
+                        </div>
+                        <div class="col-md-12 my-2">
+                            <h3>Course Name : Angular</h3>
+                        </div>
+                        <form>
+                            <label for="user-rating-input"></label>
+                            <input type="number" class="ok col-md-12 text-center mb-4 p-3 form-control-lg" id="user-rating-input" placeholder="On the scale of 1 to 10">
+                            <button type="submit" class="btn btn-lg btn-success">Okay, Rate!</button>
+                        </form>
+                    </div>
+
+                    <div class="col-2"></div>
+
+                    <div class="col-5 text-center p-3" id="user-rating-background">
+                        <div class="col-md-12 my-3">
+                            <h2>Mentor Name : Jeyam</h2>
+                        </div>
+                        <div class="col-md-12 my-2">
+                            <h3>Course Name : Bootstrap</h3>
+                        </div>
+                        <form>
+                            <label for="user-rating-input"></label>
+                            <input type="number" class="ok col-md-12 text-center mb-4 p-3 form-control-lg" id="user-rating-input" placeholder="On the scale of 1 to 10">
+                            <button type="submit" class="btn btn-lg btn-success">Okay, Rate!</button>
+                        </form>
+
+                    </div>
+
+                </div>
+                <div class="row p-3">
+
+                    <div class="col-5 text-center p-3" id="user-rating-background">
+                        <div class="col-md-12 my-3">
+                            <h2>Mentor Name : Amrutha</h2>
+                        </div>
+                        <div class="col-md-12 my-2">
+                            <h3>Course Name : Full Stack</h3>
+                        </div>
+                        <form>
+                            <label for="user-rating-input"></label>
+                            <input type="number" class="ok col-md-12 text-center mb-4 p-3 form-control-lg" id="user-rating-input" placeholder="On the scale of 1 to 10">
+                            <button type="submit" class="btn btn-lg btn-success">Okay, Rate!</button>
+                        </form>
+                    </div>
+
+                    <div class="col-2"></div>
+
+                    <div class="col-5 text-center p-3" id="user-rating-background">
+                        <div class="col-md-12 my-3">
+                            <h2>Mentor Name : Rajkumar</h2>
+                        </div>
+                        <div class="col-md-12 my-2">
+                            <h3>Course Name : HTML,CSS</h3>
+                        </div>
+                        <form>
+                            <label for="user-rating-input"></label>
+                            <input type="number" class="ok col-md-12 text-center mb-4 p-3 form-control-lg" id="user-rating-input" placeholder="On the scale of 1 to 10">
+                            <button type="submit" class="btn btn-lg btn-success">Okay, Rate!</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Dynamic table population -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/user-homepage.js"></script>
+
+</body>
+
+</html>
