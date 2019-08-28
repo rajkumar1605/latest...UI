@@ -385,7 +385,7 @@ select {
     height: auto;
     margin: 0 auto;
     background-image: url("../images/payment-gateway.jpg");
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-size: 100% 1024px;
 }
 
